@@ -15,4 +15,3 @@ Username: <?= $info['username'] ?><br>
 Email: <?= $info['email'] ?><br><br>
 
 <a href="update_profile.php">Edit Email</a>
-
