@@ -15,10 +15,10 @@ else
     <p>Username: {$info['username']}</p>
     <p>Email: {$info['email']}</p><br>
 
-    <a href="update_profile.php">Edit Email</a>
+    
     ";
 }
 
-
-
 ?>
+
+<a href="update_profile.php">Edit Email</a>
