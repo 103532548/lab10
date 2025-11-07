@@ -50,9 +50,9 @@ if(isset($_POST['username']))
     $password = $_POST['password'];
     $email = $_POST['email'];
 
-    if ()
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password' AND email='$email'")) > 0)
     {
-        //...
+        $_SESSION['username']=$username;
         header("Location: profile.php");
         exit();
     }
