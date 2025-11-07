@@ -12,10 +12,10 @@ else
     echo 
     "
     <h2>Profile</h2>
-    <p>Username: {$info['username']}</p>
-    <p>Email: {$info['email']}</p><br>
-
-    
+    <tr>
+    <th>Username: {$row['username']}</th>
+    <th>Email: {$row['email']}</th>
+    </tr>
     ";
 }
 
