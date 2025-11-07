@@ -11,7 +11,7 @@ if(!isset($_POST['username']))
 ?>
 
 <h2>Profile</h2>
-Username: <?= $info['username'] ?><br>
-Email: <?= $info['email'] ?><br><br>
+<p>Username: <?= $info['username'] ?></p>
+<p>Email: <?= $info['email'] ?></p>
 
 <a href="update_profile.php">Edit Email</a>
