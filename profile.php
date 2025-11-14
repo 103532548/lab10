@@ -16,7 +16,6 @@ if (!$conn)
 else
 {
     $result = mysqli_query($conn, "SELECT * FROM user");
-    
 
     if(!$result)
     {
@@ -54,4 +53,5 @@ else
 
 ?>
 
+<br>
 <a href="update_profile.php">Edit Email</a>
