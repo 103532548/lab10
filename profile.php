@@ -15,7 +15,7 @@ if (!$conn)
 }
 else
 {
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    $result = mysqli_query($conn, "SELECT * FROM users");
     
 
     if(!$result)
