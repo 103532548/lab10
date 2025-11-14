@@ -54,7 +54,7 @@ $user = mysqli_fetch_assoc($query);
 
     if($user) 
     {
-        $_SESSION['username']=$username;
+        $_SESSION['username']=$user['username'];
         $_SESSION['email']=$user['email'];
         header("Location: profile.php");
         exit();
