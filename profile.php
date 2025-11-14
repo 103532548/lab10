@@ -15,7 +15,7 @@ if (!$conn)
 }
 else
 {
-    $result = mysqli_query($conn, "SELECT * FROM users");
+    $result = mysqli_query($conn, "SELECT * FROM user");
     
 
     if(!$result)
