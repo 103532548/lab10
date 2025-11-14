@@ -48,11 +48,12 @@ if(isset($_POST['username']))
 {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $email = $_POST['email'];
+$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+$user = mysqli_fetch_assoc($query);
 
-    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password' AND email='$email'")) > 0)
-    {
+ if($user) {
         $_SESSION['username']=$username;
+        $_SESSION['email']=$user['email'];
         header("Location: profile.php");
         exit();
     }
