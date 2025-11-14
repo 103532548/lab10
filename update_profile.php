@@ -24,6 +24,6 @@ $username=$_SESSION['username'];
 $email=$_POST['email'];
 
 mysqli_query($conn,"UPDATE user SET email='$email' WHERE username='$username'");
-header("Location: profile.php");
+header("Location: update_profile.php");
 
 ?>
