@@ -26,13 +26,16 @@ if (!$conn)
 }
 else
 {
-    $result = mysqli_query($conn, "UPDATE user SET email='" . $_POST['email'] . "' WHERE username='" . $_SESSION['username'] . "'");
+    $result = mysqli_query($conn, " UPDATE user SET email='$_POST['email']' WHERE username='$_SESSION['username']' ");
+    
     while($row = mysqli_fetch_assoc($result))
     {
         $_SESSION['email'] = $row['email'];
         header("Location: profile.php");
         exit();
     }
+
+    mysqli_free_result($result);
 }
 
 ?>
