@@ -13,8 +13,8 @@ else
     "
     <h2>Profile</h2>
     <tr>
-    <th>{$row['username']}</th>
-    <th>{$row['email']}</th>
+    <td>{$row['username']}</td>
+    <td>{$row['email']}</td>
     </tr>
     ";
 }
