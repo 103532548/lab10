@@ -26,8 +26,12 @@ if (!$conn)
 }
 else
 {
-    
-    $result = mysqli_query($conn, "UPDATE user SET email=$_POST['email'] WHERE username=$_SESSION['username']");
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+
+    $sql ="UPDATE user SET email='$email' WHERE username='$username'";
+    $result = mysqli_query($conn, $sql);
     
     while($row = mysqli_fetch_assoc($result))
     {
