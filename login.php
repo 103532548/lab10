@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <header>
         <h1>Login</h1>
     </header>
@@ -49,8 +48,8 @@ if(isset($_POST['username']))
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-$query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username' AND password='$password'");
-$user = mysqli_fetch_assoc($query);
+    $query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username' AND password='$password'");
+    $user = mysqli_fetch_assoc($query);
 
     if($user) 
     {
